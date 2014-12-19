@@ -27,6 +27,10 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
+      .when('/twitter', {
+        templateUrl: 'views/twitter.html',
+        controller: 'TwitterCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
