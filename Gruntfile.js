@@ -351,6 +351,21 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: "Buil %sourceName% from commit %sourceCommit% on branch %sourceBranch%"
+      },
+      pages: {
+        options: {
+          remote: "git@github.com:sisidovski/ogp-sandbox.git",
+          branch: 'gh-pages'
+        }
+      }
     }
   });
 
